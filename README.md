@@ -1,21 +1,26 @@
-# Routes
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-TanStack Start uses **file-based routing**. Every `.tsx` file in this directory
-defines a route. Do **not** create `src/pages/`, `src/routes/_app/index.tsx`, or
-`app/layout.tsx` — those are Next.js / Remix conventions. The only root layout
-is `src/routes/__root.tsx`.
+## Getting Started
 
-## Conventions
+First, run the development server:
 
-| File | URL |
-| --- | --- |
-| `index.tsx` | `/` |
-| `about.tsx` | `/about` |
-| `users/index.tsx` | `/users` |
-| `users/$id.tsx` | `/users/:id` (dynamic — bare `$`, no curly braces) |
-| `posts/{-$category}.tsx` | `/posts/:category?` (optional segment) |
-| `files/$.tsx` | `/files/*` (splat — read via `_splat` param, never `*`) |
-| `_layout.tsx` | layout route (renders children via `<Outlet />`) |
-| `__root.tsx` | app shell — wraps every page; preserve `<Outlet />` |
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-`routeTree.gen.ts` is auto-generated. Don't edit it by hand.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## J10 Effect
+
+AI advertising studio — single-page marketing site ported from the `Design Change` TanStack Start draft to the standard Next.js App Router (`app/`).
+
+- `app/page.tsx` — homepage (hero, manifesto, work, services, footer)
+- `app/layout.tsx` — root layout + metadata
+- `app/globals.css` — Tailwind v4 + custom J10 styles
+- `public/` — hero/work images, favicon, robots.txt
