@@ -95,6 +95,17 @@ export function Work() {
     dialogRef.current?.showModal();
   }
 
+  function handleClose() {
+    // Removing a video from the page doesn't stop its download, so cancel it.
+    const video = dialogRef.current?.querySelector("video");
+    if (video) {
+      video.pause();
+      video.removeAttribute("src");
+      video.load();
+    }
+    setOpenFilm(null);
+  }
+
   return (
     <section className="work" id="work" aria-labelledby="work-heading">
       <h2 id="work-heading">Proof, not prompts.</h2>
@@ -109,7 +120,7 @@ export function Work() {
         ref={dialogRef}
         className={openFilm?.vertical ? "player player-reel" : "player"}
         aria-label={openFilm ? `${openFilm.title} film` : "Film player"}
-        onClose={() => setOpenFilm(null)}
+        onClose={handleClose}
         onClick={(event) => {
           if (event.target === event.currentTarget) dialogRef.current?.close();
         }}
