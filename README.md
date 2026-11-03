@@ -24,4 +24,4 @@ Single-page site for an AI film and advertising studio, built with the Next.js A
 - `app/components/hero-film.tsx`: hero film and chapter timeline
 - `app/components/work.tsx`: portfolio and film player
 - `app/contact.ts`: contact email, used everywhere on the site
-- `public/films/`: web encodes and posters. The MP4s are gitignored, so they don't reach Vercel through a git deploy. Deploy with the Vercel CLI from a folder that has them (`npx vercel --prod`).
+- `public/films/`: web encodes and posters, committed so Vercel's git pipeline can deploy them. Raw source footage stays local in `assets-source/`.
