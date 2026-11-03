@@ -6,6 +6,7 @@ const display = Big_Shoulders({
   subsets: ["latin"],
   weight: ["800", "900"],
   variable: "--font-display",
+  adjustFontFallback: false,
 });
 
 const body = Schibsted_Grotesk({
