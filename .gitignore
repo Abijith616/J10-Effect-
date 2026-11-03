@@ -41,5 +41,5 @@ next-env.d.ts
 assets-source/
 *.zip
 
-# video files (kept local only, not pushed)
-public/*.mp4
+# web video encodes (kept local, deployed with the Vercel CLI)
+public/films/*.mp4

@@ -1,0 +1,4 @@
+assets-source
+*.zip
+.agents
+.codex

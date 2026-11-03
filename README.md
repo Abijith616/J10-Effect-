@@ -18,9 +18,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## J10 Effect
 
-AI advertising studio — single-page marketing site ported from the `Design Change` TanStack Start draft to the standard Next.js App Router (`app/`).
+Single-page site for an AI film and advertising studio, built with the Next.js App Router.
 
-- `app/page.tsx` — homepage (hero, manifesto, work, services, footer)
-- `app/layout.tsx` — root layout + metadata
-- `app/globals.css` — Tailwind v4 + custom J10 styles
-- `public/` — hero/work images, favicon, robots.txt
+- `app/page.tsx`: page layout and copy
+- `app/components/hero-film.tsx`: hero film and chapter timeline
+- `app/components/work.tsx`: portfolio and film player
+- `app/contact.ts`: contact email, used everywhere on the site
+- `public/films/`: web encodes and posters. The MP4s are gitignored, so they don't reach Vercel through a git deploy. Deploy with the Vercel CLI from a folder that has them (`npx vercel --prod`).
